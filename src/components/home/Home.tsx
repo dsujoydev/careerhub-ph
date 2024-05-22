@@ -3,6 +3,7 @@ import Banner from "../banner/Banner";
 import Hero from "../hero/Hero";
 import Cat from "../cat/Cat";
 import Jobs from "../jobs/Jobs";
+import { Button } from "../ui/button";
 
 type Category = {
   id: number;
@@ -34,6 +35,7 @@ type Job = {
 const Home = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [dataLength, setDataLength] = useState<number>(4);
 
   useEffect(() => {
     fetch("categories.json")
@@ -61,7 +63,28 @@ const Home = () => {
         paragraph="Explore thousands of job opportunities with all the information you need. Its your future"
       />
 
-      <Jobs jobs={jobs} />
+      <Jobs jobs={jobs.slice(0, dataLength)} />
+      <div className="flex align-middle justify-center mt-2">
+        {dataLength <= 4 ? (
+          <Button
+            onClick={() => {
+              setDataLength(jobs.length);
+            }}
+            variant="careerhub"
+          >
+            Show all
+          </Button>
+        ) : (
+          <Button
+            onClick={() => {
+              setDataLength(4);
+            }}
+            variant="careerhub"
+          >
+            Hide
+          </Button>
+        )}
+      </div>
     </>
   );
 };

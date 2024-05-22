@@ -23,6 +23,7 @@ type Job = {
 
 type jobProps = {
   jobs: Job[];
+  // dataLength: number;
 };
 
 const Jobs: React.FC<jobProps> = ({ jobs }) => {
