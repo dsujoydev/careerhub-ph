@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
 type Job = {
@@ -46,9 +47,11 @@ const Jobs: React.FC<jobProps> = ({ jobs }) => {
             <span className="text-[#757575]">{j.location}</span>
             <span className="text-[#757575]">{j.salary}</span>
           </div>
-          <Button className="w-24" variant="careerhub">
-            View Details
-          </Button>
+          <Link to="/job-details">
+            <Button className="w-24" variant="careerhub">
+              View Details
+            </Button>
+          </Link>
         </div>
       ))}
     </div>

@@ -35,7 +35,7 @@ const Header = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavLink
-              to="/appliedJobs"
+              to="/applied-jobs"
               style={({ isActive, isTransitioning }) => {
                 return {
                   fontWeight: isActive ? "bold" : "",
