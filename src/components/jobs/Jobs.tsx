@@ -1,25 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-
-type Job = {
-  id: number;
-  logo: string;
-  job_title: string;
-  company_name: string;
-  remote_or_onsite: string;
-  location: string;
-  job_type: string;
-  salary: string;
-  job_description: string;
-  job_responsibility: string;
-  educational_requirements: string;
-  experiences: string;
-  contact_information: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-};
+import { Job } from "@/utils/types";
 
 type jobProps = {
   jobs: Job[];
@@ -48,7 +29,7 @@ const Jobs: React.FC<jobProps> = ({ jobs }) => {
             <span className="text-[#757575]">{j.location}</span>
             <span className="text-[#757575]">{j.salary}</span>
           </div>
-          <Link to="/job-details">
+          <Link to={`/job/${j.id}`}>
             <Button className="w-24" variant="careerhub">
               View Details
             </Button>

@@ -1,17 +1,27 @@
+import { useParams, useLoaderData } from "react-router-dom";
+import { Job } from "@/utils/types";
+// import { useEffect, useState } from "react";
+
 const JobDetails = () => {
+  const { id } = useParams<{ id: string }>();
+  const jobs = useLoaderData() as Job[];
+  const jobId = Number(id);
+  const job = jobs.find((j) => j.id === jobId);
+  console.log(job);
+
   return (
     <div>
       <h1>JOb details</h1>
 
-      <div>
-        <div>
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="border md:col-span-3">
           <p>job_description</p>
           <p>job_responsibility</p>
           <p>educational_requirements</p>
           <p>experiences</p>
         </div>
 
-        <div>
+        <div className="border md:col-span-1">
           <span>Job Details</span>
           <hr />
           <p>Salary:</p>
