@@ -17,3 +17,14 @@ export type Job = {
     address: string;
   };
 };
+
+export type InfoSectionProps = {
+  title: string;
+  content: string | undefined;
+};
+
+export type InfoItemProps = {
+  icon: React.ReactNode;
+  label: string;
+  value: string | undefined;
+};
