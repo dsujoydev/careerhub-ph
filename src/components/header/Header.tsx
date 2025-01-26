@@ -10,10 +10,11 @@ import {
   //   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-between align-middle">
       <span className="font-bold">CareerHub</span>
@@ -54,7 +55,9 @@ const Header = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <Button variant="careerhub">Start Applying</Button>
+      <Button onClick={() => navigate("/application")} variant="careerhub">
+        Start Applying
+      </Button>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useParams, useLoaderData } from "react-router-dom";
 import type { Job } from "@/utils/types";
 import { Banknote, Briefcase, Phone, Mail, MapPin } from "lucide-react";
-import { InfoItem, InfoSection } from "@/components/ui/cuatom/InfoBox";
+import { InfoItem, InfoSection } from "@/components/ui/custom/InfoBox";
 
 const JobDetails = () => {
   const { id } = useParams<{ id: string }>();
