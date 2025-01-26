@@ -64,16 +64,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
-              <a to="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Facebook">
+              <a href="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a to="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Twitter">
+              <a href="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Twitter">
                 <Twitter size={24} />
               </a>
-              <a to="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="LinkedIn">
+              <a href="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="LinkedIn">
                 <LinkedIn size={24} />
               </a>
-              <a to="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Instagram">
+              <a href="#" className="text-gray-400 hover:text-[#7E90FE]" aria-label="Instagram">
                 <Instagram size={24} />
               </a>
             </div>
