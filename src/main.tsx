@@ -7,6 +7,7 @@ import Home from "./components/home/Home";
 import AppliedJobs from "./pages/appliedJobs/AppliedJobs";
 import JobDetails from "./pages/jobDetails/JobDetails";
 import ApplyCart from "./pages/applyCart/ApplyCart";
+import Blog from "./components/blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/application",
         element: <ApplyCart />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },

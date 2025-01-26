@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding React Hooks",
+    "author": "Jane Doe",
+    "date": "2023-12-01",
+    "excerpt": "Dive into the world of React Hooks and learn how to use them effectively in your projects.",
+    "content": "React Hooks have revolutionized the way developers build React applications. By introducing features like useState and useEffect, Hooks allow developers to manage state and lifecycle methods in function components."
+  },
+  {
+    "id": 2,
+    "title": "Mastering TypeScript for Better Code",
+    "author": "John Smith",
+    "date": "2023-11-15",
+    "excerpt": "Learn how TypeScript can improve your development process with better type safety and tooling.",
+    "content": "TypeScript extends JavaScript by adding static types. This helps catch errors early during development and provides a robust environment for building scalable applications. In this article, we explore the fundamentals of TypeScript and how to integrate it into your projects."
+  },
+  {
+    "id": 3,
+    "title": "CSS Grid: Building Modern Layouts",
+    "author": "Emily Davis",
+    "date": "2023-10-20",
+    "excerpt": "Discover the power of CSS Grid and how to create flexible and responsive layouts.",
+    "content": "CSS Grid is a powerful layout system available in CSS. It provides a two-dimensional grid-based layout system, which makes it easier to design web pages without the use of floats or positioning. In this guide, we will explore the basics of CSS Grid and practical examples."
+  },
+  {
+    "id": 4,
+    "title": "Improving Web Performance",
+    "author": "Michael Lee",
+    "date": "2023-09-30",
+    "excerpt": "Explore techniques to enhance the performance of your web applications.",
+    "content": "Web performance is crucial for user experience and SEO rankings. Techniques like code splitting, lazy loading, and image optimization can drastically improve load times. In this article, we will delve into these strategies and more."
+  },
+  {
+    "id": 5,
+    "title": "State Management with Redux",
+    "author": "Sarah Connor",
+    "date": "2023-08-25",
+    "excerpt": "Understand the fundamentals of Redux and how it helps manage state in large-scale applications.",
+    "content": "Redux is a predictable state container for JavaScript apps. It helps manage application state in a predictable way, making debugging and testing easier. Learn the basics of Redux, including actions, reducers, and the store, with practical examples."
+  }
+]
