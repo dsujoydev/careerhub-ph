@@ -1,13 +1,36 @@
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import type { Job } from "@/utils/types";
 import { Banknote, Briefcase, Phone, Mail, MapPin } from "lucide-react";
-import { InfoItem, InfoSection } from "@/components/ui/custom/InfoBox";
 
 const JobDetails = () => {
   const { id } = useParams<{ id: string }>();
-  const jobs = useLoaderData() as Job[];
-  const jobId = Number(id);
-  const job = jobs.find((j) => j.id === jobId);
+  const navigate = useNavigate();
+  const [job, setJob] = useState<Job | null>(null);
+
+  useEffect(() => {
+    fetch("/jobs.json")
+      .then((res) => res.json())
+      .then((data: Job[]) => {
+        const foundJob = data.find((j) => j.id === Number(id));
+        setJob(foundJob || null);
+      })
+      .catch((error) => console.error("Error fetching job details:", error));
+  }, [id]);
+
+  const handleApply = () => {
+    if (job) {
+      const appliedJobs = JSON.parse(localStorage.getItem("appliedJobs") || "[]");
+      if (!appliedJobs.some((j: Job) => j.id === job.id)) {
+        appliedJobs.push(job);
+        localStorage.setItem("appliedJobs", JSON.stringify(appliedJobs));
+        alert("Job application submitted successfully!");
+        navigate("/applied-jobs");
+      } else {
+        alert("You have already applied for this job.");
+      }
+    }
+  };
 
   if (!job) {
     return <div className="text-center py-20">Job not found</div>;
@@ -43,6 +66,13 @@ const JobDetails = () => {
               label="Address"
               value={job.contact_information.address}
             />
+
+            <button
+              onClick={handleApply}
+              className="w-full bg-[#7E90FE] text-white px-4 py-2 rounded mt-6 hover:bg-[#6A7CE0] transition-colors"
+            >
+              Apply Now
+            </button>
           </div>
         </div>
       </div>
@@ -51,3 +81,34 @@ const JobDetails = () => {
 };
 
 export default JobDetails;
+
+type InfoSectionProps = {
+  title: string;
+  content: string | undefined;
+};
+
+const InfoSection: React.FC<InfoSectionProps> = ({ title, content }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6">
+      <h2 className="text-xl font-semibold mb-3 text-[#1A1A1A]">{title}</h2>
+      <p className="text-[#757575]">{content}</p>
+    </div>
+  );
+};
+
+type InfoItemProps = {
+  icon: React.ReactNode;
+  label: string;
+  value: string | undefined;
+};
+
+const InfoItem: React.FC<InfoItemProps> = ({ icon, label, value }) => {
+  return (
+    <div className="flex items-center mb-3">
+      <div className="mr-3">{icon}</div>
+      <div>
+        <span className="font-medium text-[#474747]">{label}:</span> <span className="text-[#757575]">{value}</span>
+      </div>
+    </div>
+  );
+};
