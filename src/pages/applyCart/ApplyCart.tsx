@@ -32,9 +32,9 @@ const ApplyCart = () => {
         {jobs.map((job) => (
           <div
             key={job.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 flex flex-col"
           >
-            <div className="p-6">
+            <div className="p-6 flex-grow">
               <h2 className="text-2xl font-semibold mb-2 text-gray-800">{job.job_title}</h2>
               <p className="text-gray-600 mb-4 flex items-center">
                 <Briefcase className="mr-2 h-5 w-5" /> {job.company_name}
@@ -46,7 +46,7 @@ const ApplyCart = () => {
                 <DollarSign className="mr-2 h-5 w-5" /> {job.salary}
               </p>
             </div>
-            <div className="px-6 pb-6 flex justify-between items-center">
+            <div className="px-6 pb-6 mt-auto flex justify-between items-center">
               <Link
                 to={`/job/${job.id}`}
                 className="bg-[#7E90FE] text-white px-4 py-2 rounded-full hover:bg-[#6A7CE0] transition-colors"

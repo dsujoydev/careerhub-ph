@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Calendar, User, ChevronRight } from "lucide-react";
 
 interface BlogPost {
@@ -44,10 +45,10 @@ const Blog = () => {
               <p className="text-gray-600 mb-4">{post.excerpt}</p>
             </div>
             <div className="px-6 pb-6">
-              <button className="text-[#7E90FE] font-semibold flex items-center hover:underline">
+              <Link to={`/blog/${post.id}`} className="text-[#7E90FE] font-semibold flex items-center hover:underline">
                 Read More
                 <ChevronRight className="ml-2 h-5 w-5" />
-              </button>
+              </Link>
             </div>
           </div>
         ))}
