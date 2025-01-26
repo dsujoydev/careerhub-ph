@@ -5,7 +5,8 @@
     "author": "Jane Doe",
     "date": "2023-12-01",
     "excerpt": "Dive into the world of React Hooks and learn how to use them effectively in your projects.",
-    "content": "React Hooks have revolutionized the way developers build React applications. By introducing features like useState and useEffect, Hooks allow developers to manage state and lifecycle methods in function components."
+    "content": "React Hooks have revolutionized the way developers build React applications. By introducing features like useState and useEffect, Hooks allow developers to manage state and lifecycle methods in function components.",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*HemFwK6FJ1T9gNtz.png"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "author": "John Smith",
     "date": "2023-11-15",
     "excerpt": "Learn how TypeScript can improve your development process with better type safety and tooling.",
-    "content": "TypeScript extends JavaScript by adding static types. This helps catch errors early during development and provides a robust environment for building scalable applications. In this article, we explore the fundamentals of TypeScript and how to integrate it into your projects."
+    "content": "TypeScript extends JavaScript by adding static types. This helps catch errors early during development and provides a robust environment for building scalable applications. In this article, we explore the fundamentals of TypeScript and how to integrate it into your projects.",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Fl18PXRfIGlqiXKIahbkjA.png"
   },
   {
     "id": 3,

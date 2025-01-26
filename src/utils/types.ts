@@ -10,6 +10,8 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   content: string;
+  image?: string;
+  readTime?: string;
 }
 
 export type Category = {
