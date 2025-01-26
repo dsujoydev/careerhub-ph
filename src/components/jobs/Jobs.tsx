@@ -2,12 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Job } from "@/utils/types";
 
-type jobProps = {
-  jobs: Job[];
-  // dataLength: number;
-};
-
-const Jobs: React.FC<jobProps> = ({ jobs }) => {
+const Jobs: React.FC<{ jobs: Job[] }> = ({ jobs }) => {
   return (
     <div className="grid grid-cols-2 gap-4 ">
       {jobs.map((j) => (

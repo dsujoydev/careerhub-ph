@@ -1,3 +1,24 @@
+export type BannerProps = {
+  header: string;
+  paragraph: string;
+};
+
+export interface BlogPost {
+  id: number;
+  title: string;
+  author: string;
+  date: string;
+  excerpt: string;
+  content: string;
+}
+
+export type Category = {
+  id: number;
+  category_name: string;
+  availability: string;
+  logo: string;
+};
+
 export type Job = {
   id: number;
   logo: string;

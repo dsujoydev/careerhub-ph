@@ -1,15 +1,7 @@
-type Category = {
-  id: number;
-  category_name: string;
-  availability: string;
-  logo: string;
-};
+import React from "react";
+import { Category } from "@/utils/types";
 
-type CatProps = {
-  categories: Category[];
-};
-
-const Cat: React.FC<CatProps> = ({ categories }) => {
+const Cat: React.FC<{ categories: Category[] }> = ({ categories }) => {
   return (
     <div className="w-50 h-50 flex gap-3 justify-evenly my-10">
       {categories.map((c) => (
@@ -24,11 +16,8 @@ const Cat: React.FC<CatProps> = ({ categories }) => {
           >
             <img src={c.logo} alt={`${c.category_name} logo`} className="max-w-full max-h-full" />
           </div>
-          {/* <div className="width-[10px] height-[10px]">
-            <img className="p-4 bg-color-[#7E90FE]" src={c.logo} alt="logo" />
-          </div> */}
-          <span className="text-xl font-bold"> {c.category_name}</span>
-          <span className="text-sm font-light text-[#A3A3A3]"> {c.availability}</span>
+          <span className="text-xl font-bold">{c.category_name}</span>
+          <span className="text-sm font-light text-[#A3A3A3]">{c.availability}</span>
         </div>
       ))}
     </div>

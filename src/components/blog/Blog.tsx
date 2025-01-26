@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ChevronRight } from "lucide-react";
-
-interface BlogPost {
-  id: number;
-  title: string;
-  author: string;
-  date: string;
-  excerpt: string;
-  content: string;
-}
+import { BlogPost } from "@/utils/types";
 
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);

@@ -4,14 +4,7 @@ import Hero from "../hero/Hero";
 import Cat from "../cat/Cat";
 import Jobs from "../jobs/Jobs";
 import { Button } from "../ui/button";
-import { Job } from "@/utils/types";
-
-type Category = {
-  id: number;
-  category_name: string;
-  availability: string;
-  logo: string;
-};
+import { Category, Job } from "@/utils/types";
 
 const Home = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -30,7 +23,6 @@ const Home = () => {
       .catch((error) => console.error("Error fetching jobs:", error));
   }, []);
 
-  console.log(jobs);
   return (
     <>
       <Hero />

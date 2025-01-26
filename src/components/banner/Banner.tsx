@@ -1,7 +1,4 @@
-type BannerProps = {
-  header: string;
-  paragraph: string;
-};
+import { BannerProps } from "@/utils/types";
 
 const Banner: React.FC<BannerProps> = ({ header, paragraph }) => {
   return (
